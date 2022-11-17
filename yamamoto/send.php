@@ -1,5 +1,4 @@
 <?php
-  jazttijaztti
   $name = $_GET['name'];
   $age = $_GET['age'];
   $email = $_GET['email'];
