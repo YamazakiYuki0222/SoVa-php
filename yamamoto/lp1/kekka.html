@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>We are vue</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!--imoirt vue.js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+         <div><img src="https://uploads-ssl.webflow.com/5f8009158e24202c48522644/6241514a9eb29c1697a55eca_Frame%202317.svg"></div>
+      </header>
+      <div id="fv">
+         <div id="fv__left">
+
+         </div>
+         <div id="fv__right">
+
+         </div>
+      </div>
+      <main>
+
+      </main>
+      <footer>
+
+      </footer>
+      <img src="https://uploads-ssl.webflow.com/5f8009158e24202c48522644/6241514a9eb29c1697a55eca_Frame%202317.svg" >
+      <div id="app">
+        <!-- v-model input -->
+        <div class="row">
+          <label>name:<label>
+          <input type="text" v-model="name" />
+        </div>
+        <!-- v-model input -->
+        <div class="row">
+          <label>price:<label>
+          <input type="number" v-model="price" />
+        </div>
+        <!-- v-model radio -->
+        <div class="row">
+          <input type="radio" v-model="area" value="Tokyo" /> Tokyo
+          <input type="radio" v-model="area" value="BeiJing" />BeiJing
+          <input type="radio" v-model="area" value="ShangHai" />ShangHai
+        </div>
+        <!-- v-model selected -->
+        <div class="row">
+          <input type="checkbox" v-model="tag" value="Red" /> Red
+          <input type="checkbox" v-model="tag" value="Yellow" /> Yellow
+          <input type="checkbox" v-model="tag" value="Sweet" /> Sweet
+          <input type="checkbox" v-model="tag" value="Acid" /> Acid
+        </div>
+        <button @click="submit">クリック</button>
+        <div v-if="foods && show_flg">
+          <div v-for="(item ,index) in foods"  :key="foods.index">
+            <p>{{item.name}} ({{item.price}}$) comes from {{area}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      var vue = new Vue({
+        el: "#app",
+        /*model*/
+        data: function () {
+          return {
+            name: '',
+            price: '',
+            area: "Tokyo",
+            tag: [],
+            foods:[],
+            show_flg:false,
+          }
+        },
+        mounted() {
+          this.getFoodList();
+        },
+        methods: {
+          getFoodList: async function() {
+
+            axios.get("https://62fe320941165d66bfbabe7e.mockapi.io/apt/v1/foods").then((resp) => {
+              //console.log(resp);
+
+              this.foods = resp.data
+              //console.log(this.foods)
+
+            }).catch((err) => {
+              //debugger;
+            })
+          },
+          submit: async function() {
+            //console.log(this.name, this.price, this.area, this.tag)
+            const params = {
+              name: this.name,
+              price: this.price,
+              area: this.area,
+              tag: this.tag
+            };
+            axios.post("https://62fe320941165d66bfbabe7e.mockapi.io/apt/v1/foods", params).then((resp) => {
+              //console.log(resp.data)
+              //alert(resp.data)
+              this.show_flg = true;
+            }
+          )}
+        },
+      });
+    </script>
+  </body>
+</html>
+
