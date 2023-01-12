@@ -2,15 +2,13 @@
 require_once('obj_client.php');
 $client = new client();
 
-function sova(){
 
-}
-
-
-$sova = function(string $param):string
+$nagasaki = function()
 {
-   return "蕎麦関数の引数は".$param;
+   return "nagasakidesu";
 }
+
+$nagasaki();
 
 ?>
 <!DOCTYPE html>
@@ -21,9 +19,13 @@ $sova = function(string $param):string
 </head>
 <body>
 <?=  $client->get_client_infomation(); ?>
-<?= $client->get_shop(function(){
-    return "蕎麦関数の引数は".$param; 
-}, 'デフォ'); ?>
+
+
+<?= $client->get_shop( function(){
+  return "aaa";
+
+}  , 'aaa')
+
 </body>
 </html>
 
