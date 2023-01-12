@@ -5,7 +5,7 @@
   <title></title>
 </head>
 <body>
-  <form action="touki.php" method="post">
+  <form action="index.php" method="post">
     <h2>商号変更について</h2>
     <p>新しい会社名を教えてください</p>
     フリガナ<input type="text" name="new_name_kana"><br>
