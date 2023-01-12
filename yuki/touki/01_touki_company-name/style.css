@@ -1,0 +1,246 @@
+* {
+box-sizing:border-box;
+padding:0px;
+margin:0px;
+
+}
+
+
+
+#wrapper {
+background-image:url("touki_shougou-1.png");
+background-size:cover;
+background-position:center center;
+width:1090px;
+height:1543px;
+position:relative;
+font-family: serif;
+}
+
+#t0{
+  border: 1px solid blue;
+  height: 48px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 404px;
+  font-size: 24px;
+  letter-spacing:0.64px;
+}
+
+/** 法人番号 **/
+#t1 {
+  border: 1px solid blue;
+  height: 48px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 404px;
+  font-size: 24px;
+}
+
+/**旧商号（フリガナ）**/
+#t2_1 {
+  border: 1px solid blue;
+  height: 24px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 468px;
+  font-size: 16px;
+font-family: serif;
+}
+
+/**旧商号 **/
+#t2_2 {
+  border: 1px solid blue;
+  height: 36px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 496px;
+  font-size: 24px;
+}
+
+/**新商号（フリガナ）**/
+#t2_3 {
+  border: 1px solid red;
+  height: 24px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 536px;
+  font-size: 16px;
+}
+
+/**新商号 **/
+#t2_4 {
+  border: 1px solid red;
+  height: 36px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 564px;
+  font-size: 24px;
+  background-color:#fff;
+}
+
+/**本店住所 **/
+#t3 {
+  border: 1px solid blue;
+  height: 72px;
+  width: 500px;
+  position: absolute;
+  left: 430px;
+  top: 606px;
+  font-size: 24px;
+  background-color:#fff;
+}
+
+/**登記すべき事項「商号」の親要素**/
+#t4 {
+  border:1px solid red;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:start;
+  align-items:flex-start;
+  position:absolute;
+  left:430px;
+  top:728px;
+  width:500px;
+  height:36px;
+  font-size:24px;
+}
+
+/**登記すべき事項子要素**/
+#t4_1 {
+  border:1px solid blue;
+  height:36px;
+  width:72px;
+  font-size:24px;
+}
+#t4_2 {
+  border:1px solid red;
+  height:36px;
+  width:72px;
+  font-size:24px;
+  flex:1;
+}
+/**登記すべき事項「原因年月日」の親要素**/
+#t5 {
+  border:1px solid red;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:start;
+  align-items:flex-start;
+  position:absolute;
+  left:430px;
+  top:768px;
+  width:500px;
+  height:36px;
+  font-size:24px;
+}
+
+/**登記すべき事項子要素**/
+#t5_1 {
+  border:1px solid blue;
+  height:36px;
+  width:72px;
+  font-size:24px;
+}
+#t5_2 {
+  border:1px solid red;
+  height:36px;
+  width:72px;
+  font-size:24px;
+  flex:1;
+}
+
+/**登録免許税**/
+#t6 {
+  border:1px solid blue;
+  height:36px;
+  width:108px;
+  font-size:24px;
+  position:absolute;
+  top:820px;
+  left:430px;
+
+}
+/**申請日の年**/
+#t7_1 {
+  border:1px solid red;
+  height:36px;
+  width:36px;
+  font-size:24px;
+  position:absolute;
+  top:1124px;
+  left:224px;
+
+}
+/**申請日の月**/
+#t7_2 {
+  border:1px solid red;
+  height:36px;
+  width:36px;
+  font-size:24px;
+  position:absolute;
+  top:1124px;
+  left:288px;
+
+}
+/**申請日の日**/
+#t7_3 {
+  border:1px solid red;
+  height:36px;
+  width:36px;
+  font-size:24px;
+  position:absolute;
+  top:1124px;
+  left:354px;
+
+}
+/**申請人**/
+#t8 {
+  border:1px solid red;
+  height:36px;
+  width:500px;
+  font-size:24px;
+  position:absolute;
+  top:1184px;
+  left:368px;
+
+}
+/**代表取締役**/
+#t9 {
+  border:1px solid blue;
+  height:36px;
+  width:455px;
+  font-size:24px;
+  position:absolute;
+  top:1244px;
+  left:412px;
+
+}
+/**電話番号**/
+#t10 {
+  border:1px solid blue;
+  height:36px;
+  width:388px;
+  font-size:24px;
+  position:absolute;
+  top:1303px;
+  left:480px;
+
+}
+/**管轄法務局**/
+#t11 {
+  border:1px solid blue;
+  height:28px;
+  width:120px;
+  font-size:18px;
+  position:absolute;
+  top:1368px;
+  left:108px;
+
+}

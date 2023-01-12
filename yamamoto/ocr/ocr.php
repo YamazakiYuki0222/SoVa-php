@@ -1,6 +1,6 @@
 <?php
 /*
-* まずdocker psでコンテナiDを把握
+ *まずdocker psでコンテナiDを把握
  * docker exec -it XXXXXXXX /bin/bashでログイン
  * apt update
  * apt install tesseract-ocr
