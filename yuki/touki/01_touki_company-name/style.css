@@ -1,10 +1,4 @@
-* {
-box-sizing:border-box;
-padding:0px;
-margin:0px;
-
-}
-
+/**index.phpのwrapper **/
 #wrapper {
 background-image:url("bg_img01.png");
 background-size:cover;
@@ -15,89 +9,117 @@ position:relative;
 font-family: serif;
 }
 
-#t0{
-  border: 3px solid blue;
-  height: 48px;
-  width: 500px;
-  position: absolute;
-  left: 430px;
-  top: 404px;
-  font-size: 24px;
-  letter-spacing:0.64px;
+body {
+  font-family:serif;
+}
+
+/**index2.phpのwrapper **/
+#wrapper2 {
+background-image:url("bg_img02.png");
+background-size:cover;
+background-position:center center;
+width:1090px;
+height:1543px;
+position:relative;
+font-family: serif;
+}
+
+/**フォームが未入力の場合 **/
+#blank_message  {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color:rgba(255,10,10,1);
+  color:#fff;
+  position:absolute;
+  top:80px;
+  left:680px;
+  width:400px;
+  #max-height:280px;
+  font-size:18px;
+}
+
+#blank_message p {
+  padding:3px 6px ;
+  margin:3px 0px;
+}
+
+/**会社住所の文字数に応じてフォントサイズを変更**/
+.size_change{
+  font-size:18px;
 }
 
 /** 法人番号 **/
 #t1 {
-  border: 3px solid blue;
-  height: 48px;
+  #border: 3px solid blue;
+  height: 30px;
   width: 500px;
   position: absolute;
   left: 430px;
-  top: 404px;
+  top: 408px;
   font-size: 24px;
 }
 
-/**旧商号（フリガナ）**/
+/**商号（フリガナ）**/
 #t2_1 {
-  border: 3px solid blue;
-  height: 24px;
+  #border: 3px solid blue;
+  height: 18px;
   width: 500px;
   position: absolute;
   left: 430px;
-  top: 468px;
-  font-size: 16px;
-font-family: serif;
+  top: 474px;
+  font-size: 12px;
 }
 
-/**旧商号 **/
+/**商号 **/
 #t2_2 {
-  border: 3px solid blue;
-  height: 36px;
+  #border: 3px solid blue;
+  height: 24px;
   width: 500px;
+  padding:6px 0px 0px 0px;
   position: absolute;
   left: 430px;
-  top: 496px;
+  top: 500px;
   font-size: 24px;
 }
 
 /**新商号（フリガナ）**/
 #t2_3 {
-  border: 3px solid red;
-  height: 24px;
+  #border: 3px solid red;
+  height: 18px;
   width: 500px;
   position: absolute;
   left: 430px;
-  top: 536px;
-  font-size: 16px;
+  top: 539px;
+  font-size: 12px;
 }
 
 /**新商号 **/
 #t2_4 {
-  border: 3px solid red;
-  height: 36px;
+  #border: 3px solid red;
+  height: 24px;
   width: 500px;
+  padding:3px 0px;
   position: absolute;
   left: 430px;
-  top: 564px;
+  top: 567px;
   font-size: 24px;
   background-color:#fff;
 }
 
 /**本店住所 **/
 #t3 {
-  border: 3px solid blue;
+  #border: 3px solid blue;
   height: 72px;
   width: 500px;
+  padding:3px 0px;
   position: absolute;
   left: 430px;
-  top: 606px;
+  top: 620px;
   font-size: 24px;
   background-color:#fff;
 }
 
 /**登記すべき事項「商号」の親要素**/
 #t4 {
-  border:3px solid red;
   display:flex;
   flex-wrap:nowrap;
   justify-content:start;
@@ -105,140 +127,125 @@ font-family: serif;
   position:absolute;
   left:430px;
   top:728px;
-  width:500px;
+  width:528px;
   height:36px;
   font-size:24px;
 }
 
-/**登記すべき事項子要素**/
+/**登記すべき事項「商号」の子要素**/
 #t4_1 {
-  border:3px solid blue;
-  height:36px;
-  width:72px;
+  height:24px;
+  width:108px;
+  padding:3px 0px;
   font-size:24px;
+  margin:0px 6px 0px 0px;
 }
 #t4_2 {
-  border:3px solid red;
-  height:36px;
-  width:72px;
+  #border:3px solid red;
+  height:24px;
+  padding:3px 0px;
   font-size:24px;
   flex:1;
 }
 /**登記すべき事項「原因年月日」の親要素**/
 #t5 {
-  border:3px solid red;
   display:flex;
   flex-wrap:nowrap;
   justify-content:start;
   align-items:flex-start;
   position:absolute;
   left:430px;
-  top:768px;
-  width:500px;
+  top:772px;
+  width:528px;
   height:36px;
   font-size:24px;
 }
 
-/**登記すべき事項子要素**/
+/**登記すべき事項「原因年月日」の子要素**/
 #t5_1 {
-  border:3px solid blue;
-  height:36px;
-  width:72px;
+  height:24px;
+  width:180px;
+  padding:3px 0px;
   font-size:24px;
+  margin:0px 6px 0px 0px;
 }
 #t5_2 {
-  border:3px solid red;
-  height:36px;
-  width:72px;
+  #border:3px solid red;
+  height:24px;
+  padding:3px 0px;
   font-size:24px;
   flex:1;
 }
 
 /**登録免許税**/
 #t6 {
-  border:3px solid blue;
-  height:36px;
+  #border:3px solid blue;
+  height:24px;
   width:108px;
+  padding:3px 0px 3px 0px;
+  text-align:right;
   font-size:24px;
   position:absolute;
-  top:820px;
+  top:822px;
   left:430px;
 
 }
-/**申請日の年**/
-#t7_1 {
-  border:3px solid red;
-  height:36px;
-  width:36px;
+
+/**申請年月日**/
+#t7{
+  #border:3px solid red;
+  background-color:#fff;
+  height:24px;
+  width:256px;
+  padding:6px 0px;
   font-size:24px;
   position:absolute;
   top:1124px;
-  left:224px;
+  left:168px;
 
 }
-/**申請日の月**/
-#t7_2 {
-  border:3px solid red;
-  height:36px;
-  width:36px;
-  font-size:24px;
-  position:absolute;
-  top:1124px;
-  left:288px;
 
-}
-/**申請日の日**/
-#t7_3 {
-  border:3px solid red;
-  height:36px;
-  width:36px;
-  font-size:24px;
-  position:absolute;
-  top:1124px;
-  left:354px;
-
-}
 /**申請人**/
 #t8 {
-  border:3px solid red;
-  height:36px;
+  #border:3px solid red;
+  height:24px;
   width:500px;
   font-size:24px;
   position:absolute;
-  top:1184px;
+  top:1190px;
   left:368px;
 
 }
 /**代表取締役**/
 #t9 {
-  border:3px solid blue;
-  height:36px;
+  #border:3px solid blue;
+  height:24px;
   width:455px;
   font-size:24px;
   position:absolute;
-  top:1244px;
+  top:1250px;
   left:412px;
 
 }
 /**電話番号**/
 #t10 {
-  border:3px solid blue;
-  height:36px;
-  width:388px;
+  #border:3px solid blue;
+  height:24px;
+  width:386px;
   font-size:24px;
   position:absolute;
-  top:1303px;
+  top:1310px;
   left:480px;
 
 }
 /**管轄法務局**/
 #t11 {
-  border:3px solid blue;
-  height:28px;
-  width:120px;
+  #border:3px solid blue;
+  height:24px;
+  width:128px;
   font-size:18px;
   position:absolute;
-  top:1368px;
-  left:108px;
+  top:1370px;
+  left:94px;
 
 }
