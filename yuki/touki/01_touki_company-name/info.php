@@ -26,7 +26,8 @@
    
 
   //和暦を表示させる関数
-  function wareki($param){
+  function wareki(array $param):string
+  {
    if (!empty($param[0])) {
     $res_y = $param[0] - "2018";
     $res_m = month_if($param[1]);
@@ -44,7 +45,7 @@
   
   //入力された日付のうち、１桁の月を表示する関数
   //「01月」と表示されるところを「1月」と表示するためのもの
-  function month_if($param)
+  function month_if(string $param):string
   {
     if (substr($param,0,1) == '0')  
     {
@@ -59,7 +60,7 @@
   
   //入力された日付のうち、１桁の日を表示する関数
   //「01日」と表示されるところを「1日」と表示するためのもの
-  function date_if($param)
+  function date_if(string $param):string
   {
     if (substr($param,0,1) == '0')  
     {
