@@ -1,3 +1,7 @@
+<?php
+$company_infomation['companay_number'] = "00000000";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
 <body>
   <form action="index.php" method="post">
     <h2>会社情報について</h2>
-    Q1.会社法人番号<input type="text" name="company_number" placeholder="1234567890123"><br>
+    Q1.会社法人番号<input type="text" name="company_number" value="<?=$company_infomation ?>" placeholder="1234567890123"><br>
     Q2.会社住所<input type="text" name="company_address" placeholder="東京都港区三田9-99-99"><br>
     Q3.代表取締役のお名前<input type="text" name="president_name" placeholder="蕎麦一郎"><br>
     Q4.代表者の連絡先<input type="text" name="president_tel" placeholder="09099999999"><br>
