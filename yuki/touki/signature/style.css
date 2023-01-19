@@ -1,0 +1,14 @@
+#wrapper {
+background-image:url("bg_img01.png");
+background-size:cover;
+background-position:center center;
+width:1090px;
+height:1543px;
+position:relative;
+font-family: serif;
+}
+
+body {
+  font-family:serif;
+}
+

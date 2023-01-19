@@ -1,18 +1,18 @@
 <?php 
   
   $company_number = $_POST['company_number'];
+  /*法人番号のうち、最初の数値を除いた12桁のものが$company_number2 */
+  $company_number2 = substr($company_number,1);
   $company_address = $_POST['company_address'];
   $president_name = $_POST['president_name'];
-  $president_tel = $_POST['president_tel'];
-  $lab = $_POST['lab'];
-  $old_name_kana = $_POST['old_name_kana'];
-  $old_name = $_POST['old_name'];
-  $new_name_kana = $_POST['new_name_kana'];
+  $president_address = $_POST['president_address'];
   $new_name = $_POST['new_name'];
   $date = $_POST['date'];
+  $birthday_president = $POST['birthday_president'];
   $post = $_POST;
 
   $date_explode = explode('-',$date);
+  $birthday_president_explode = explode('-',$birthday_president);
 
   $date_year = $date_explode[0];
   $date_month = $date_explode[1];
