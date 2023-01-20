@@ -6,9 +6,164 @@ width:1090px;
 height:1543px;
 position:relative;
 font-family: serif;
+/**実際には文字の色は黒ですが、入力した情報がどこに入ってくるかをわかりやすくするために文字の色を青くしています。 **/
+color:#4169e1;
+font-size:18px;
 }
 
 body {
   font-family:serif;
+}
+
+/**会社住所の文字数に応じてフォントサイズを変更**/
+.size_change{
+  font-size:12px;
+}
+
+
+/**商号・名称 **/
+#t1 {
+  position:absolute;
+  top:186px;
+  left:589px;
+  height: 49px;
+  width: 377px;
+  padding: 6px;
+   
+}
+
+/**本店・主たる事務所**/
+#t2 {
+  position: absolute;
+  top: 250px;
+  left: 589px;
+  height: 49px;
+  width: 377px;
+  padding: 6px;
+   
+}
+
+/*資格「代表取締役」に丸を付す
+ *ここは「代表取締役」で固定
+ */
+ 
+#t3 {
+  position: absolute;
+  top: 317px;
+  left: 603px;
+  content: "";
+  border: 2px solid #4169e1;
+  border-radius: 15px;
+  width: 128px;
+  height: 22px; 
+
+}
+
+/**印鑑提出者氏名**/
+#t4 {
+  position: absolute;
+  top: 382px;
+  left: 589px;
+  height: 26px;
+  width: 377px;
+  padding: 18px 6px;
+   
+}
+/**生年月日_西暦**/
+#t5_1 {
+  position: absolute;
+  top: 447px;
+  left: 768px;
+  height: 18px;
+  width: 42px;
+  padding: 15px 0px;
+  font-size: 18px;
+}
+
+/**生年月日_年**/
+#t5_2 {
+  position: absolute;
+  top: 447px;
+  left: 830px;
+  height: 18px;
+  width: 36px;
+  padding: 15px 0px;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+/**生年月日_日**/
+#t5_3 {
+  position: absolute;
+  top: 447px;
+  left: 885px;
+  height: 18px;
+  width: 36px;
+  padding: 15px 0px;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+/**会社法人番号**/
+#t6 {
+  position: absolute;
+  top: 497px;
+  left: 589px;
+  height: 26px;
+  width: 377px;
+  padding: 18px 6px; 
+  font-size: 24px;
+}
+
+/*「印鑑提出者本人」のチェックマーク
+ *ここは「印鑑提出者本人」で固定
+ *「代理人」になることはない
+ */
+#t7 {
+  content: '';
+  width: 21px;
+  height: 10px;
+  border-left: 3px solid #4169e1;
+  border-bottom: 3px solid #4169e1;
+  transform: rotate(-45deg);
+  position:absolute;
+  top:634px;
+  left:264px;
+
+}
+/**住所**/
+#t8 {
+  position: absolute;
+  top: 662px;
+  left: 204px;
+  height: 50px;
+  width: 552px;
+  padding: 6px;
+   
+}
+
+/**フリガナ**/
+#t9 {
+  position: absolute;
+  top: 728px;
+  left: 204px;
+  height: 12px;
+  width: 560px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+
+/**氏名**/
+#t10 {
+  position: absolute;
+  top: 747px;
+  left: 204px;
+  height: 24px;
+  width: 552px;
+  padding: 14px 6px;
+  font-size: 18px;   
 }
 

@@ -4,11 +4,12 @@
   /*法人番号のうち、最初の数値を除いた12桁のものが$company_number2 */
   $company_number2 = substr($company_number,1);
   $company_address = $_POST['company_address'];
+  $president_name_kana = $_POST['president_name_kana'];
   $president_name = $_POST['president_name'];
   $president_address = $_POST['president_address'];
   $new_name = $_POST['new_name'];
   $date = $_POST['date'];
-  $birthday_president = $POST['birthday_president'];
+  $birthday_president = $_POST['birthday_president'];
   $post = $_POST;
 
   $date_explode = explode('-',$date);
@@ -64,6 +65,7 @@
     return $ret;
   }
   
+
   /*入力された日付のうち、１桁の日を表示する関数
    *「01日」と表示されるところを「1日」と表示するためのもの
    * @param 01日というような文字列が入ってくる
